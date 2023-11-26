@@ -20,7 +20,7 @@ class HomeController extends GetxController {
 
   load() async {
     loading.value = true;
-    // pokemones.value = await PorkeApi().getPokemons(0);
+    pokemones.value = await PorkeApi().getPokemons(0);
 
     print(pokemones.length);
     loading.value = false;
@@ -29,19 +29,9 @@ class HomeController extends GetxController {
   loadPage(int index) async {
     loading.value = true;
     page.value = index;
-    // pokemones.value = await PorkeApi().getPokemons(page.value);
+    pokemones.value = await PorkeApi().getPokemons(page.value);
     loading.value = false;
   }
-
-  // loadLess() async {
-  //   loading.value = true;
-
-  //   if (page > minPage) {
-  //     page--;
-  //   }
-  //   pokemones.value = await PorkeApi().getPokemons(page);
-  //   loading.value = false;
-  // }
 
   // buscar en guess data
 

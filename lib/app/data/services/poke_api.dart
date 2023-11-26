@@ -33,6 +33,8 @@ class PorkeApi {
     try {
       int init = (validatePage(page) * 6);
       final Response response = await _dio.get('$_url?limit=6&offset=$init');
+
+      print('response.data: ${response.data}');
       final List<Pokemon> pokemons = [];
       for (var item in response.data['results']) {
         final Response response = await _dio.get(item['url']);
@@ -42,6 +44,7 @@ class PorkeApi {
       }
       return pokemons;
     } catch (e) {
+      print(e);
       return [];
     }
   }

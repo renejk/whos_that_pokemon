@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class Pokemon {
   final int number;
   final String name;
@@ -15,6 +13,3 @@ class Pokemon {
         json['gif'],
       );
 }
-
-List<Pokemon> pokeFromJson(String str) =>
-    List<Pokemon>.from(json.decode(str).map((x) => Pokemon.fromJson(x)));
