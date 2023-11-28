@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Application",
+      title: "Who's that Pokemon?",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
     );

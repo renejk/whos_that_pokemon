@@ -25,6 +25,7 @@ class GameController extends GetxController {
   }
 
   back() {
+    _timerGame.cancel();
     Get.offAllNamed(Routes.HOME);
   }
 
